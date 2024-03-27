@@ -1,22 +1,30 @@
 import Preload from './src/preload.js';
-import Menu from './src/menu.js';
+import Scene1 from './src/Scene1.js';
 
-class Main extends Phaser.Scene {
-    constructor() {
-        super('Main');
-    }
-    config = {
-        type: Phaser.AUTO,
-        width: 800,
-        height: 600,
-        scene: {
-            Preload,
-            Menu
-        }
-    };
     
-    game = new Phaser.Game(config);
-}
+
+    const config = {
+        type: Phaser.AUTO,
+        width: 1280,
+        height: 720,
+        scene: [
+            Preload,
+            Scene1
+        ],
+        scale: {
+            // Fit to window
+            mode: Phaser.Scale.FIT,
+            // Center vertically and horizontally
+            autoCenter: Phaser.Scale.CENTER_BOTH
+        },
+    };
+
+
+    
+    const game = new Phaser.Game(config);
+
+    
+
 
 
 
