@@ -12,7 +12,7 @@ export default class Scene1 extends Phaser.Scene {
         
         super('Scene1');
 
-        this.money = 65;
+        this.money = 99999999999999999;
 
         this.upgradeDressPrice = 5000;
         this.upgradeInteriorPrice = 15000;
@@ -73,7 +73,7 @@ export default class Scene1 extends Phaser.Scene {
         this.add.image(0,0, 'interiors', 'interior1.png')
         .setOrigin(0,0);
 
-        this.buttonGirlUpgrade = this.add.image(719, 113, 'girls', 'girl1.png')
+        this.currentDressGirl = this.add.image(719, 113, 'girls', 'girl1.png')
         .setOrigin(0,0)
         
 
@@ -100,9 +100,6 @@ export default class Scene1 extends Phaser.Scene {
         .setOrigin(0,0);
 
         this.add.image(645, 12, 'GUI', 'Rectangle1.png')
-        .setOrigin(0,0);
-
-        this.currentDressGirl = this.add.image(23, 159, 'GUI', 'girlDress.png')
         .setOrigin(0,0);
 
         this.add.image(234, 167, 'GUI', 'interiorButton.png')
@@ -204,7 +201,7 @@ export default class Scene1 extends Phaser.Scene {
 
         this.buttonGirlUpgrade.on('pointerdown', (pointer) =>{
             if (pointer.event.button === 0) {
-                
+                this.upgradeDressBuy();
             }
         })
 
@@ -343,20 +340,15 @@ export default class Scene1 extends Phaser.Scene {
     }
 
     upgradeDressBuy(){
-        if(this.money >= this.upgradeDressPrice){
+        if(this.money >= this.upgradeDressPrice && this.upgradeDressCurrentIndex < this.upgradeDressKeys.length - 1){
 
             this.money -= this.upgradeDressPrice;
-            
-            
-            if (this.upgradeDressCurrentIndex < this.upgradeDressKeys.length - 1) {
                 
-                this.upgradeDressCurrentIndex++;
-                
-                this.currentDressGirl.setTexture(this.girlSpriteKeys[this.upgradeDressCurrentIndex]);
-                
-                
-                this.upgradeAutoclickPrice = DRESS_BASE_PRICE * (UPGRADE_DRESS_MP ** this.currentDressGirl);
-            }
+            this.upgradeDressCurrentIndex++;
+            this.currentDressGirl.setFrame(this.upgradeDressKeys[this.upgradeDressCurrentIndex]);
+
+            this.upgradeDressPrice = DRESS_BASE_PRICE * (UPGRADE_DRESS_MP ** this.upgradeDressCurrentIndex);
+
             
             
 
