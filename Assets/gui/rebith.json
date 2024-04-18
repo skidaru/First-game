@@ -1,0 +1,95 @@
+{
+	"frames": {
+		"rebithMenuButtonExit.png": {
+			"frame": {
+				"x": 8,
+				"y": 8,
+				"w": 82,
+				"h": 82
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 82,
+				"h": 82
+			},
+			"sourceSize": {
+				"w": 82,
+				"h": 82
+			}
+		},
+		"rebithMenu.png": {
+			"frame": {
+				"x": 106,
+				"y": 8,
+				"w": 682,
+				"h": 536
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 682,
+				"h": 536
+			},
+			"sourceSize": {
+				"w": 682,
+				"h": 536
+			}
+		},
+		"rebithMenuButton.png": {
+			"frame": {
+				"x": 8,
+				"y": 560,
+				"w": 505,
+				"h": 69
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 505,
+				"h": 69
+			},
+			"sourceSize": {
+				"w": 505,
+				"h": 69
+			}
+		},
+		"rebithFade.png": {
+			"frame": {
+				"x": 804,
+				"y": 8,
+				"w": 1280,
+				"h": 720
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 1280,
+				"h": 720
+			},
+			"sourceSize": {
+				"w": 1280,
+				"h": 720
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "spritesheet.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 2092,
+			"h": 736
+		},
+		"scale": "1"
+	}
+}
